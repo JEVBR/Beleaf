@@ -2,7 +2,9 @@
 <div>
   <% marmitas.forEach(marmita => { %>
     <a href="/marmitas/<%= marmita.id %>">
-      <img height="150" width="100" src="<%= marmita.productImagePath %>">
+      <img height="250" width="200" src="<%= marmita.productImagePath %>">
+      <p>
+      <%= marmita.nome %>
     </a>
   <% }) %>
 </div>
