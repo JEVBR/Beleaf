@@ -1,0 +1,11 @@
+<h2><%= marmita.nome %></h2>
+<img src="<%= marmita.productImagePath %>">
+<div>Preco: <%= marmita.preco %></div>
+<div>Desconto: <%= marmita.desconto %></div>
+<div>Em Estoque: <%= marmita.estoque %></div>
+<div>Ingredientes: <%= marmita.ingredientes %></div>
+<div>Description: <%= marmita.description %></div>
+
+<a href="/marmitas/<%= marmita.id %>/edit">Edit</a>
+
+<%- include('../partials/deleteForm', { url: `/marmitas/${marmita.id}`}) %>

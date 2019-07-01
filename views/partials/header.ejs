@@ -1,0 +1,20 @@
+<header>
+  <nav>
+    <a href="/">Beleaf Marmitas</a>
+    <p>-------</p>
+<!--    <a href="/users/register">Register</a> UNCOMMENT THIS TO SEE THE REGISTRATION PAGE!-->
+    <% if(!locals.login) { %>
+      <a>Voce nao esta logado</a>
+      <a href="/users/login">Login</a>
+    <% } else { %>
+      <a>Voce esta logado </a>
+      <a href="/users/logout">Logout</a>
+
+    <% } %>
+
+    <ul>
+      <li><a href="/marmitas">Nossas Marmitas</a></li>
+      <li><a href="/marmitas/new">seja seu proprio chefe e cria uma marmita</a></li>
+    </ul>
+  </nav>
+</header>

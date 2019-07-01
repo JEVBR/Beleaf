@@ -1,0 +1,17 @@
+<h2>Nossas Marmitas</h2>
+<div>
+  <% marmitas.forEach(marmita => { %>
+    <a href="/marmitas/<%= marmita.id %>">
+      <img height="150" width="100" src="<%= marmita.productImagePath %>">
+    </a>
+  <% }) %>
+</div>
+
+<h3>Procurar Marmita por nome</h3>
+<form action="/marmitas" method="GET">
+  <div>
+    <label>Nome</label>
+    <input type="text" name="nome" value="<%= searchOptions.title %>">
+  </div>
+  <button type="submit">Search</button>
+</form>

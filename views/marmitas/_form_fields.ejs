@@ -1,0 +1,36 @@
+<div>
+  <label>Nome</label>
+  <input type="text" name="nome" value="<%= marmita.nome %>">
+</div>
+
+<div>
+  <label>Description</label>
+  <textarea name="description"><%= marmita.description %></textarea>
+</div>
+
+<div>
+  <label>Ingredientes: </label>
+  <textarea name="ingredientes"><%= marmita.ingredientes %></textarea>
+</div>
+
+<div>
+  <label>Preco</label>
+  <input type="number" name="preco" min="0" value="<%= marmita.preco %>">
+</div>
+
+<div>
+  <label>Desconto</label>
+  <input type="number" name="desconto" min="0" value="<%= marmita.desconto %>">
+</div>
+
+<div>
+  <label>Quantidade em Estoque</label>
+  <input type="number" name="estoque" min="0" value="<%= marmita.estoque %>">
+</div>
+
+<div >
+  <label>Foto</label>
+  <input type="file" name="product" class="filepond" >
+</div>
+
+

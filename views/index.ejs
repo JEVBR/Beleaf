@@ -1,0 +1,8 @@
+<h2>Lista de Marmitas</h2>
+<div>
+  <% marmitas.forEach(marmita => { %>
+    <a href="/marmitas/<%= marmita.id %>">
+      <img height="150" width="100" src="<%= marmita.productImagePath %>">
+    </a>
+  <% }) %>
+</div>
