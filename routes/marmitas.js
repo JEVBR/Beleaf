@@ -41,8 +41,7 @@ router.post('/', ensureAuthenticated, async (req, res) => {
   try {
     const newmarmita = await marmita.save()
     res.redirect(`marmitas/${newmarmita.id}`)
-  } catch (e){
-    console.log(e)
+  } catch {
     renderNewPage(res, marmita, true)
   }
 })
@@ -90,7 +89,7 @@ router.put('/:id', ensureAuthenticated, async (req, res) => {
     } else {
       res.render('marmitas/show', {
         marmita: marmita,
-        errorMessage: ' oopps'
+        errorMessage: 'Falha atualizando a Marmita'
       })
     }
   }
@@ -108,7 +107,7 @@ router.delete('/:id', ensureAuthenticated, async (req,res ) => {
     if (marmita != null) {
       res.render('marmitas/show', {
         marmita: marmita,
-        errorMessage: ' Could not remove marmita'
+        errorMessage: 'nao foi posivel remover a Marmita'
       })
     } else {
       res.redirect('/')
@@ -127,7 +126,7 @@ async function renderNewPage(res, marmita, hasError = false) {
 async function renderFormPage(res, marmita, form, hasError = false) {
   try {
     const params = { marmita: marmita }
-    if (hasError) params.errorMessage = 'Error Creating marmita'
+    if (hasError) params.errorMessage = 'Falha criando a Marmita'
     res.render(`marmitas/${form}`, params)
   } catch (e) {
     console.log(e)
@@ -140,7 +139,7 @@ async function renderNewPage(res, marmita, hasError = false) {
 }
 
 function saveProductImg(marmita, productEncoded) {
-  if (productEncoded == null) return
+  if (productEncoded == null || productEncoded == "") return
   const product = JSON.parse(productEncoded)
   if (product != null && imageMimeTypes.includes(product.type)) {
     marmita.productImage = new Buffer.from(product.data, 'base64')
