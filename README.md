@@ -13,7 +13,7 @@ Destilling some info from the design specifications, 2 pages need to be construc
 
 # Depoly
 
-The app has been deployed at https://beleafmarmitas.herokuapp.com/marmitas
+The app has been deployed at https://beleafmarmitas.herokuapp.com
 
 a login can be done with email: "User@Beleaf.com" and password "Beleaf"
 
