@@ -19,12 +19,12 @@ route GET '/' =
 
 # /marmitas
 
-route GET '/' (always available)
+route GET 'marmitas/' (always available)
 
   gives list of marmita objects depending on the given search parameter
   gives all marmitas if no search option is given
 
-route GET '/new' (only available when logged in)
+route GET 'marmitas/new' (only available when logged in)
 
   create new marmita
 
@@ -33,33 +33,44 @@ route GET '/new' (only available when logged in)
     and
     product (=image)
 
-route POST '/' (only available when logged in)
+route POST 'marmitas/' (only available when logged in)
 
   Save new marmita to DB
 
-route GET '/:id' (always available)
+route GET 'marmitas/:id' (always available)
 
   give marmita depending on ID
 
-route GET '/:id/edit' (only available when logged in)
+route GET 'marmitas/:id/edit' (only available when logged in)
 
   edit single marmita
 
-route PUT '/:id' (only available when logged in)
+route PUT 'marmitas/:id' (only available when logged in)
 
   save single marmita to DB
 
-route DELETE '/:id' (only available when logged in)
+route DELETE 'marmitas/:id' (only available when logged in)
 
   delete single marmita from DB
 
 # users
 
-route GET '/login'
+route GET '/users/login'
 
-  Show the login page
+  Handle the login page
 
-router GET ('/register', forwardAuthenticated, (req, res) => res.render('register'));
+route GET '/users/register' (no link to this endpoint in the app)
 
-// Register
-router.post('/register'
+  Handle the registration page
+
+route POST '/users/register' (no link to this endpoint in the app)
+
+  Creates a new user
+
+route POST '/users/login'
+
+  login for existing user
+
+route GET '/users/logout'
+
+  logout page
