@@ -6,13 +6,18 @@ Destilling some info from the design specifications, 2 pages need to be construc
 
 - 1 page shows individual marmita
 
-# Still to do:
+# Still to do! :
 
 - Styling! No styling has been done so far
-- Change Mongoose DB to a Releational DB
+- Change Mongoose DB to a Relational DB
 
+# Depoly
 
-Routes used:
+The app has been deployed at https://beleafmarmitas.herokuapp.com/marmitas
+
+a login can be done with email: "User@Beleaf.com" and password "Beleaf"
+
+# Routes used:
 
 
 routes to be implemented:
