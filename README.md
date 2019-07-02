@@ -2,9 +2,9 @@
 
 Destilling some info from the design specifications, 2 pages need to be constructed:
 
-1 page shows all marmitas
+  1 page shows all marmitas
 
-1 page shows individual marmita
+  1 page shows individual marmita
 
 Routes used:
 
@@ -29,9 +29,9 @@ route GET 'marmitas/new' (only available when logged in)
   create new marmita
 
   params:
-    nome,preco,desconto,ingredientes,estoque:,description
-    and
-    product (=image)
+      nome,preco,desconto,ingredientes,estoque:,description
+      and
+      product (=image)
 
 route POST 'marmitas/' (only available when logged in)
 
